@@ -1,0 +1,7 @@
+﻿ Changes to be committed:
+	new file:   Activity.hs
+	new file:   Programme.hs
+	new file:   Test.hs
+	new file:   Tests/Activity.hs
+
+
