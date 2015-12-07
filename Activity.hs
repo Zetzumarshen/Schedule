@@ -17,4 +17,4 @@ type Actor = String
 
 isCollision :: Activity -> Activity -> Bool
 isCollision (Activity _ act1 st1 end1) (Activity _ act2 st2 end2) =
-    act1 == act2 && st1 < end1 && st2 < end1
+    act1 == act2 && st1 < end2 && st2 < end1

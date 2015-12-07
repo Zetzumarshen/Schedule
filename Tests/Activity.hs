@@ -19,7 +19,9 @@ clockGen :: Gen DiffTime
 clockGen = fmap (\x -> secondsToDiffTime (x * 3600)) $ choose (0,23)
 
 dayGen :: Gen Day
-dayGen = fmap (\x -> fromGregorian 2015 x x) $ choose (1, 31)
+dayGen = fmap (\x -> fromGregorian 2015 (f x 12) (f x 31))  (choose (0, 1.0) :: Gen Double)
+    where
+        f x y = fromInteger (round (x * y))
 
 --commutative
 prop_swapisCollision x y = do
